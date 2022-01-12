@@ -7,6 +7,10 @@
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
+CREATE Database task1;
+
+use task1;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
