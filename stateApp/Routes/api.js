@@ -72,21 +72,5 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
-router.get('/create-table', function (req, res) {
-    pool.connect(function (err) {
-        if (err) throw err;
-
-        const sql = `
-CREATE TABLE IF NOT EXISTS table1(
-id int(11) NOT NULL,
-state varchar(15) DEFAULT NULL,
-title varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1  `;
-        pool.query(sql, function (err, result) {
-            if (err) throw err;
-            res.send("numbers table created");
-        });
-    });
-})
 
 module.exports = router;
